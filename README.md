@@ -33,6 +33,7 @@ So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   feature
 2. Automated Testing Overview.Types of Tests Present in Angular Application - Angular. 
 3. Difference Between Isolated Unit Tests, Shallow Unit tests and Deep Integration Tests - Angular.
 4. Create a New Angu;ar Pllication, check karma configuration and run tests with npm Test Command.
+5. Create out First test Suite and Spec file in Angular Apllication and run the Test - Angular.
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
