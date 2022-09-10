@@ -9,6 +9,7 @@ export class CalculatorService {
   constructor(private loggerService:LoggerService){}
 
 add(n1:number, n2:number){
+
  let result = n1+n2;
  this.loggerService.log('Add Operation is Called');
  return result
