@@ -1,19 +1,13 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": false
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angulartesting": {
+    "angularUnittesting": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "",
@@ -23,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angulartesting",
+            "outputPath": "dist/angular-unittesting",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angulartesting:build:production"
+              "browserTarget": "angularUnittesting:build:production"
             },
             "development": {
-              "browserTarget": "angulartesting:build:development"
+              "browserTarget": "angularUnittesting:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angulartesting:build"
+            "browserTarget": "angularUnittesting:build"
           }
         },
         "test": {
@@ -109,6 +103,5 @@
         }
       }
     }
-  },
-  "defaultProject": "angulartesting"
+  }
 }
