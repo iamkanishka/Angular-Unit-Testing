@@ -30,7 +30,7 @@ You can say that all their benefits come at a great cost: TIME, but this is comp
 
 So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   features and Learn as we go on.
 1. Introduction to Angular Unit testing. Why we need to suse Unit testing in Angular App.
- 
+2. Automated Testing Overview.Types of Tests Present in Angular Application - Angular. 
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
