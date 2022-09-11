@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { StrengthPipe } from './Pipes/Strength/strength.pipe';
 import { PostsComponent } from './Componenets/Posts/posts/posts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './Componenets/post/post.component';
 
 
 
@@ -13,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     StrengthPipe,
-    PostsComponent
+    PostsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

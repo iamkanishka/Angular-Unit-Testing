@@ -43,7 +43,7 @@ So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   feature
 12. Create Posts Compoenent and Posts Service for getting posts data - Angular Testing. 
 13. Create a Spec File for Posts Componenet to do Isolated Unit Test for a Componennt - Angular Testing.
 14. Write TestCases For Delete method in Posts Componenet with Isolated Uni Tests - Angular Testing.
-15. 
+15. Create Single Post Details Component using Input and Output Property - Angular testing.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
