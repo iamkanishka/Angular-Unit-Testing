@@ -1,7 +1,7 @@
 # AngularUnittesting
 
 
-# RXJSfeatureswithAngular
+# AngularUnittesting
 
 <p align="center">
 <a  target="blank"><img src="https://miro.medium.com/max/725/1*EKbZZOcx2IfRAe4bYF_eeQ.png" width="320" alt="Coder Logo" /></a>
@@ -41,6 +41,7 @@ So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   feature
 10. Write Test Cases for the Angular Pipe Using Isolated unit tests- Angular.
 11. Writing Isolated Unit test Cases for an Angular Service - Angular.
 12. Create Posts Compoenent and Posts Service for getting posts data - Angular Testing. 
+13. Create a Spec File for Posts Componenet to do Isolated Unit Test for a Componennt - Angular Testing.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
