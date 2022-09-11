@@ -40,6 +40,7 @@ So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   feature
 9. Using before Each setup medthod to structure the Angular test Cases for Avoiing Repetitive Code.
 10. Write Test Cases for the Angular Pipe Using Isolated unit tests- Angular.
 11. Writing Isolated Unit test Cases for an Angular Service - Angular.
+12. Create Posts Compoenent and Posts Service for getting posts data - Angular Testing. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
