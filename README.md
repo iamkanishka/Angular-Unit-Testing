@@ -46,6 +46,8 @@ So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   feature
 15. Create Single Post Details Component using Input and Output Property - Angular testing.
 16. Testing the Componenet having INput and Output Event Emmiter with Subscription- Anngular Testing.
 17. Resolving Dependencies for a componenet using TestBed and its Inject Method - ANgular testing.
+18. Introductuion to Angular testBed.Create Componenet and Dependencies with test Bed - Angular testing
+19. Create Component Instance using Angular Testbed with configuretestingModule -  Angular Testing.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
