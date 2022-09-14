@@ -2,10 +2,10 @@ import { TestBed,ComponentFixture } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { Post } from 'src/app/Models/Posts';
 import { PostService } from 'src/app/Services/Posts/posts.service';
-
 import { PostsComponent } from './posts.component';
 import {Component, Input} from '@angular/core' 
 import { By } from '@angular/platform-browser';
+import { PostComponent } from '../../post/post.component';
 
 
 
@@ -16,14 +16,7 @@ describe('Posts Component', () => {
   let fixture : ComponentFixture<PostsComponent>; 
 
 
-  @Component({
-   selector:'app-post',
-   template:"<div></div>",
-  })
-  class FakePostComponenet {
-    @Input() post!:Post
 
-  }
 
 
 
@@ -49,7 +42,7 @@ describe('Posts Component', () => {
     mockPostService = jasmine.createSpyObj(['getPosts', 'deletePost']);
 
     TestBed.configureTestingModule({
-      declarations:[PostsComponent,FakePostComponenet],
+      declarations:[PostsComponent,PostComponent],
       providers: [
          {
           provide: PostService,
@@ -84,6 +77,13 @@ describe('Posts Component', () => {
       
   });
 
+  it('Should create exact number of Post Componenet with Posts', () => {
+    mockPostService.getPosts.and.returnValue(of(POSTS));
+    fixture.detectChanges();
+    const PostComponentDEs = fixture.debugElement.queryAll(By.directive(PostComponent));
+    expect(PostComponentDEs.length).toEqual(POSTS.length);
+    
+});
 
 
 
