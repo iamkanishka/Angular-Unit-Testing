@@ -52,6 +52,7 @@ So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   feature
 21. Practicle Implementation to parse Componenet Template using Angular TestBed(ATB) native Element.
 22. Difference Between the Debug Elememt and Native Element in Angular testBed(ATB) - Angular Testing.
 23. Resolve the Service Dependencies for the Componenetsuing TestBed - Angular testing.
+24. Mocking the Child Componenet and add the Fake Componenent in the TestBed - Angular Unit testing.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 

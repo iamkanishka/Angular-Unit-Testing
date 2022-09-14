@@ -7,6 +7,8 @@ import { StrengthPipe } from './Pipes/Strength/strength.pipe';
 import { PostsComponent } from './Componenets/Posts/posts/posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './Componenets/post/post.component';
+import { RouterModule } from '@angular/router';
+
 
 
 
@@ -20,7 +22,8 @@ import { PostComponent } from './Componenets/post/post.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

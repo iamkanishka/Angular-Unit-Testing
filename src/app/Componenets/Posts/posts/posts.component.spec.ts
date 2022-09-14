@@ -4,6 +4,7 @@ import { Post } from 'src/app/Models/Posts';
 import { PostService } from 'src/app/Services/Posts/posts.service';
 
 import { PostsComponent } from './posts.component';
+import {Component, Input} from '@angular/core' 
 
 
 
@@ -12,6 +13,19 @@ describe('Posts Component', () => {
   let component: PostsComponent;
   let mockPostService: any;
   let fixture : ComponentFixture<PostsComponent>; 
+
+
+  @Component({
+   selector:'app-post',
+   template:"<div></div>",
+  })
+  class FakePostComponenet {
+    @Input() post!:Post
+
+  }
+
+
+
   beforeEach(() => {
     POSTS = [
       {
@@ -34,7 +48,7 @@ describe('Posts Component', () => {
     mockPostService = jasmine.createSpyObj(['getPosts', 'deletePost']);
 
     TestBed.configureTestingModule({
-      declarations:[PostsComponent],
+      declarations:[PostsComponent,FakePostComponenet],
       providers: [
          {
           provide: PostService,
