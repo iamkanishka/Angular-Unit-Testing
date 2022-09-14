@@ -1,23 +1,17 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed,ComponentFixture } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { Post } from 'src/app/Models/Posts';
 import { PostService } from 'src/app/Services/Posts/posts.service';
 
 import { PostsComponent } from './posts.component';
 
-class mockPostService {
-  getPosts() {}
 
-  deletePost(post: Post) {
-    return of(true);
-  }
-}
 
 describe('Posts Component', () => {
   let POSTS: Post[];
   let component: PostsComponent;
-  let postService: any;
-
+  let mockPostService: any;
+  let fixture : ComponentFixture<PostsComponent>; 
   beforeEach(() => {
     POSTS = [
       {
@@ -37,25 +31,43 @@ describe('Posts Component', () => {
       },
     ];
 
-    //mockPostService = jasmine.createSpyObj(['getPosts', 'deletePost']);
+    mockPostService = jasmine.createSpyObj(['getPosts', 'deletePost']);
 
     TestBed.configureTestingModule({
+      declarations:[PostsComponent],
       providers: [
-        PostsComponent,
-        {
+         {
           provide: PostService,
-          useClass: mockPostService,
+          useValue: mockPostService,
         },
       ],
     });
 
-    component = TestBed.inject(PostsComponent);
-    postService = TestBed.inject(PostService);
+    fixture = TestBed.createComponent(PostsComponent);
+    component = fixture.componentInstance;
+  
   });
+
+
+
+
+  
+    it('Should set Posts from the service Directly', () => {
+        mockPostService.getPosts.and.returnValue(of(POSTS));
+        //component.ngOnInit();
+        fixture.detectChanges();
+        expect(component.posts.length).toBe(3)
+    });
+
+
+
+
+
+
 
   describe('delete', () => {
     beforeEach(() => {
-      //postService.deletePost.and.returnValue(of(true));
+      mockPostService.deletePost.and.returnValue(of(true));
       component.posts = POSTS;
     });
     it('should delete the selected Post from the posts', () => {
@@ -73,9 +85,9 @@ describe('Posts Component', () => {
     });
 
     it('should call the delete method in Post Service only once', () => {
-      spyOn(postService, 'deletePost').and.callThrough();
+    
       component.delete(POSTS[1]);
-      expect(postService.deletePost).toHaveBeenCalledTimes(1);
+      expect(mockPostService.deletePost).toHaveBeenCalledTimes(1);
     });
   });
 });
