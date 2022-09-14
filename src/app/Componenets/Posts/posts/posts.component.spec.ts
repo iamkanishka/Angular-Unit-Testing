@@ -86,6 +86,16 @@ describe('Posts Component', () => {
 });
 
 
+it('Should check whether exact post is sending to Componenet', () => {
+  mockPostService.getPosts.and.returnValue(of(POSTS));
+  fixture.detectChanges();
+  const PostComponentDEs = fixture.debugElement.queryAll(By.directive(PostComponent));
+  for (let index = 0; index < PostComponentDEs.length; index++) {
+  const PostComponentDEsinstance = PostComponentDEs[index].componentInstance  
+  expect(PostComponentDEsinstance.post.title).toEqual(POSTS[index].title)
+  }
+});
+
 
 
 

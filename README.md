@@ -55,7 +55,7 @@ So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   feature
 24. Mocking the Child Componenet and add the Fake Componenent in the TestBed - Angular Unit testing.
 25. testing whether the child componenet created only one for each post - Angular Unit testing.
 26. Find Child Componenets by using Directive Method in TestBed Debug Element - Angular Unit testing.
-27. 
+27. Acccess Componenet Instance of Child Componenet from parent Component Tests - Angular Unit testing.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
