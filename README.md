@@ -57,7 +57,7 @@ So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   feature
 26. Find Child Componenets by using Directive Method in TestBed Debug Element - Angular Unit testing.
 27. Acccess Componenet Instance of Child Componenet from parent Component Tests - Angular Unit testing.
 28. Create Intance for the Services using TestBed Inject method - Angular Unit testing.
-29. 
+29. Resolve Dependencies for service using testBed - Angular Unit testing.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
