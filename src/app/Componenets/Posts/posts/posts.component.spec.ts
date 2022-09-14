@@ -5,6 +5,7 @@ import { PostService } from 'src/app/Services/Posts/posts.service';
 
 import { PostsComponent } from './posts.component';
 import {Component, Input} from '@angular/core' 
+import { By } from '@angular/platform-browser';
 
 
 
@@ -72,6 +73,17 @@ describe('Posts Component', () => {
         fixture.detectChanges();
         expect(component.posts.length).toBe(3)
     });
+
+
+    it('Should create one Post Child Elememt for Each post', () => {
+      mockPostService.getPosts.and.returnValue(of(POSTS));
+      fixture.detectChanges();
+      const debugElement = fixture.debugElement;
+      const postElement = debugElement.queryAll(By.css('.posts'))
+      expect(postElement.length).toBe(POSTS.length)
+      
+  });
+
 
 
 
