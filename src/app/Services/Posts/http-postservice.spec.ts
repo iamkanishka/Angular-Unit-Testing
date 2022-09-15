@@ -31,12 +31,30 @@ describe('Post Service', () => {
         postService = TestBed.inject(PostService);
         httpTestingController = TestBed.inject(HttpTestingController);
     })
-    describe('getPost()', () => {
+    describe('getPosts()', () => {
         it('Should return  posts when getPosts() is Called', (done:DoneFn) => {
             postService.getPosts().subscribe((data)=>{expect(data).toEqual(POSTS);done();});
             const request = httpTestingController.expectOne('https://jsonplaceholder.typicode.com/posts');
             request.flush(POSTS);
             expect(request.request.method).toBe('GET');
         })
+    });
+
+    describe('getPost()', () => {
+        it('Should return  Single posts when getPost() is Called with PostId', () => {
+            postService.getPost(1).subscribe(
+                //(data)=>{expect(data).toEqual(POSTS);done();}
+                );
+                // postService.getPost(2).subscribe(
+                //     //(data)=>{expect(data).toEqual(POSTS);done();}
+                //     );
+            const request = httpTestingController.expectOne('https://jsonplaceholder.typicode.com/posts/1');
+           // request.flush(POSTS);
+            expect(request.request.method).toBe('GET');
+        })
+    })
+    afterEach(()=>{
+        httpTestingController.verify()
+
     })
 })
