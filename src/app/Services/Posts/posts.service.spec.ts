@@ -27,7 +27,14 @@ describe('PostsService', () => {
 
   beforeEach(() => {
     httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
-    postService = new PostService(httpClientSpy)
+    TestBed.configureTestingModule({
+        providers:[PostService,{
+            provide:HttpClient,useValue:httpClientSpy
+        }]
+    })
+
+    postService = TestBed.inject(PostService)
+    httpClientSpy = TestBed.inject(HttpClient) as jasmine.SpyObj<HttpClient> 
 });
 
 
