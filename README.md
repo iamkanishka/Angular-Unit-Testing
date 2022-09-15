@@ -61,6 +61,8 @@ So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   feature
 30. Testing Services Which has HttpClient as Dependency by Using jasmine Spy - Angular Unit testing.
 31. Testing HttpServices with mockHttp Client using TestBed - Angular Unit testing.
 32. Import Http Client testing Module and make Test Call with the HttpClient - Angular Unit testing.
+33. Test Http request that has custom Headers using HttpClient Testing Module - Angular unit testing.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
