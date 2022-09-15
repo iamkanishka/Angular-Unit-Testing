@@ -65,7 +65,7 @@ So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   feature
 34. testing Multiple Http requests usinh HttptestController match method - Angular testUnit testing.
 35. Add HttpClientTestingModule to PostService for Resolving HttpClient Dependency - Angular testing.
 36. HttpTesting Controller Verify method to check for no other Open Http Requests - Angular Unit testing. 
-
+37. Triggering Child componenet Button click Event and Catch it in Parent componenet Angular testing.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
 ## Development server
