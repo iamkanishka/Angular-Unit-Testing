@@ -126,7 +126,6 @@ it('Should check whether exact post is sending to Componenet', () => {
       expect(mockPostService.deletePost).toHaveBeenCalledTimes(1);
     });
   
- 
     it('should call delete method when post component button is clicked', () => {
       spyOn(component, 'delete');
       mockPostService.getPosts.and.returnValue(of(POSTS));
@@ -140,8 +139,23 @@ it('Should check whether exact post is sending to Componenet', () => {
         postComponentDEs[i]
           .query(By.css('button'))
           .triggerEventHandler('click', { preventDefault: () => {} });
-      //check 
-          // expect(component.delete).toHaveBeenCalledWith(POSTS[i]);
+        //expect(component.delete).toHaveBeenCalledWith(POSTS[i]);
+      }
+    });
+    it('should call the delete method when the delete event is emitted in Post Component', () => {
+      spyOn(component, 'delete');
+      mockPostService.getPosts.and.returnValue(of(POSTS));
+      fixture.detectChanges();
+
+      let postComponentDEs = fixture.debugElement.queryAll(
+        By.directive(PostComponent)
+      );
+
+      for (let i = 0; i < postComponentDEs.length; i++) {
+        (postComponentDEs[i].componentInstance as PostComponent).delete.emit(
+          POSTS[i]
+        );
+        expect(component.delete).toHaveBeenCalledWith(POSTS[i]);
       }
     });
 
