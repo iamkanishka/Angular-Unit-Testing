@@ -68,6 +68,7 @@ So We will be Looking These Angular-Unit-Testin with Jasmine and Karma   feature
 37. Triggering Child componenet Button click Event and Catch it in Parent componenet Angular testing.
 38. Emit Child Componenet Event Emitter using Comp Instance from Parent Componenet - Angular-testing.
 39. Create Post Details Componenet with the Activated Route - Angular Unit testing.
+40. Create testBed for ActivatedRoute and Location for the Componenet Dependencies - Angular Unit test.
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
