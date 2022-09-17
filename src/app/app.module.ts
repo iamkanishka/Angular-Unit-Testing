@@ -8,6 +8,8 @@ import { PostsComponent } from './Componenets/Posts/posts/posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './Componenets/post/post.component';
 import { RouterModule } from '@angular/router';
+import { PostDetailComponent } from './Componenets/post-detail/post-detail.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,13 +19,15 @@ import { RouterModule } from '@angular/router';
     AppComponent,
     StrengthPipe,
     PostsComponent,
-    PostComponent
+    PostComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
